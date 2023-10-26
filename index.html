@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SuperpowerDM Coming Soon</title>
+    <title>Coming Soon</title>
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@700&display=swap" rel="stylesheet">
     <style>
         body {
@@ -17,10 +17,22 @@
             align-items: center;
             justify-content: center;
             flex-direction: column;
-            cursor: url('https://i.postimg.cc/VNCsDsHn/BOLT.png'), auto;
+            position: relative;
+            cursor: none;
+        }
+        body::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 32px;
+            height: 32px;
+            background: url('https://i.postimg.cc/VNCsDsHn/BOLT.png') no-repeat center;
+            pointer-events: none;
+            transform: translate(-50%, -50%);
         }
         img {
-            width: 60%;
+            width: 50%;
             height: auto;
         }
         button {
@@ -33,13 +45,19 @@
             font-weight: bold;
             margin-top: 20px;
             transition: background-color 0.3s, color 0.3s;
-            font-family: 'DM Sans', Arial, sans-serif; /* Explicitly set the font for the button */
+            font-family: 'DM Sans', Arial, sans-serif;
         }
         button:hover {
             background-color: black;
             color: white;
         }
     </style>
+    <script>
+        document.addEventListener('mousemove', function(e) {
+            document.body.style.setProperty('--x', e.clientX + 'px');
+            document.body.style.setProperty('--y', e.clientY + 'px');
+        });
+    </script>
 </head>
 <body>
     <img src="https://i.postimg.cc/q7LyBL41/Superpower-DM-Logo-1.png" alt="SuperpowerDM Logo">
