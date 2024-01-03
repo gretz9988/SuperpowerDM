@@ -1,0 +1,43 @@
+.tooltip {
+    position: absolute;
+    display: inline-block;
+  }
+  
+  .tooltip .tooltip-icon {
+    font-family: DM Sans;
+    background-color: #ffffff;
+    color: rgb(0, 0, 0);
+    padding: 1px 8px;
+    border-radius: 50%;
+    display: inline-block;
+    font-size: 16px;
+    text-align: center;
+    margin-left: 3rem;
+    margin-top: 2rem;
+  }
+  
+  .tooltip .tooltip-text {
+    font-family: DM Sans;
+    visibility: hidden;
+    margin-left: 1rem;
+    width: 13rem;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 6px 0;
+    position: absolute;
+    z-index: 1;
+    top: 100%;
+    left: 50%;
+    margin-left: -60px;
+    opacity: 0.4;
+    transition: opacity 0.3s;
+    font-size: 1rem;
+  }
+  
+  .tooltip:hover .tooltip-text {
+    visibility: visible;
+    opacity: 1;
+  }
+  

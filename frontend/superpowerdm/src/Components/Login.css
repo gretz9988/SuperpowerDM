@@ -1,0 +1,126 @@
+.outer-container {
+  background-color: #030024;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.login-screen {
+    background-color: #030024;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    font-family: 'DM Sans', sans-serif;
+    transition: opacity 500ms ease-out;
+    width: 100%;
+  }
+  
+  .centered-image {
+    width: 60%;
+    max-width: 800px;
+    margin-bottom: -10px;
+  }
+  
+  .login-button {
+    background-color: #CD1313;
+    border: 2px solid #D37200;
+    border-radius: 8px;
+    color: white;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-top: 50px;
+    width: 200px;
+    font-family: 'DM Sans', sans-serif;
+  }
+  
+  .login-button:hover {
+    background-color: #D37200;
+  }
+
+  .register-button {
+    background-color: #030024;
+    border: 0px solid #030024;
+    color: rgb(129, 129, 129);
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-top: 20px;
+    width: 200px;
+    font-family: 'DM Sans', sans-serif;
+  }
+
+  .register-button:hover {
+    color: azure;
+  }
+
+  .fade-out {
+    opacity: 0;
+    transition: opacity 500ms ease-out;
+  }
+  
+  .fade-in {
+    opacity: 1;
+    transition: opacity 500ms ease-in;
+  }
+
+
+  .new-content {
+    text-align: center;
+    color: white;
+  }
+  
+  h1 {
+    font-size: 40px;
+    margin: 10px 0;
+    margin-bottom: 50px;
+  }
+
+  h2 {
+    font-size: 20px;
+    margin-bottom: 20px;
+  }
+  
+  .fb-login-button {
+    background-color: #1450c7;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    margin-top: 20px;
+    font-size: 16px;
+    cursor: pointer;
+    font-family: 'DM Sans', sans-serif;
+    transition: background-color 0.3s;
+  }
+
+  .fb-login-button:hover {
+    background-color: #0e2f70;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    margin-top: 20px;
+    font-size: 16px;
+    cursor: pointer;
+    font-family: 'DM Sans', sans-serif;
+  }
+  
+  .fb-login-button i {
+    margin-right: 10px;
+  }
+  
+  .bottom-image {
+    position: absolute;
+    bottom: 50px;
+    width: 100px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  

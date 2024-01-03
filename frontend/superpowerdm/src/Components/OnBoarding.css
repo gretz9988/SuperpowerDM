@@ -1,0 +1,505 @@
+.onboarding {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  min-height: 100vh; /* Full viewport height */
+  background-color: #030024;
+  color: white;
+  font-family: 'DM Sans', sans-serif;
+  position: relative; /* Needed for absolute positioning of the image */
+}
+
+.onboarding img {
+  position: absolute;
+}
+
+.progress-bar {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 30px;
+}
+
+.progress-bar img {
+  width: 30%; /* Adjust size as needed */
+  opacity: 0; /* Dim non-active steps */
+  margin: 0 10px; /* Space out the images */
+  top: 10%;
+}
+
+.progress-bar img.active {
+  opacity: 1; /* Highlight active step */
+}
+
+.bottom-img {
+  position: absolute;
+  bottom: 15%;
+  width: 8vw; /* Adjust the size as needed */
+  opacity: 0.5;
+  filter: invert(100%); /* Inverts the colors of the image */
+}
+
+button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  font-size: 1rem;
+}
+
+.content-onb {
+  justify-content: center;
+  transition: opacity 0.5s ease;
+  font-size: 1.3vw;
+  align-items: center;
+  text-align: left;
+}
+
+.content-onb h1 {
+  transition: opacity 0.5s ease;
+  font-size: 2vw;
+  max-width: 50%;  /* Set the maximum width of the container */
+  margin-left: auto;  /* These two margin properties center the container */
+  margin-right: auto;
+  text-align: left;  /* Aligns the text inside the container to the left */
+}
+
+.fade-in {
+  opacity: 1;
+}
+
+.fade-out {
+  opacity: 0;
+}
+
+.text-container {
+  max-width: 50%;  /* Set the maximum width of the container */
+  margin-left: auto;  /* These two margin properties center the container */
+  margin-right: auto;
+  text-align: left;  /* Aligns the text inside the container to the left */
+  height: 100px; /* Adjust this value based on your needs */
+  white-space: pre-line;
+}
+
+.button-container {
+  text-align: center;
+  padding-top: 10%;
+}
+
+.onboarding-button {
+  background-color: grey;
+  border: none;
+  color: white;
+  padding: 10px; /* Adjust as needed */
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 2vw 0.5vw;
+  transition: background-color 0.3s, width 0.3s, height 0.3s, border-radius 0.3s;
+  border-radius: 50%;
+  width: 1vw; /* Ensure width and height are equal */
+  height: 1vw; /* Ensure width and height are equal */
+  cursor: pointer;
+}
+
+.onboarding-button.selected {
+  background-color: white;
+  color: black;
+  width: 100px; /* Adjust as needed */
+  height: 1vw; /* Keep height consistent */
+  border-radius: 20px; /* Adjust for the semi-circle effect */
+}
+
+.onboarding-button:hover {
+  background-color: #ffffff;
+}
+
+.nextButton {
+  background-color: #bd1818;
+  border: 0px;
+  color: rgb(247, 247, 247);
+  width: 100px; /* Adjust as needed */
+  height: 38px; /* Keep height consistent */
+  border-radius: 20px; /* Adjust for the semi-circle effect */
+  padding: 5px;
+  cursor: pointer;
+}
+
+.content-onb {
+  text-align: center;
+  align-items: center;
+}
+
+.content-onb h1 {
+  text-align: center;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.button-container2 {
+  display: flex;
+  justify-content: center;
+  gap: 20px; /* Space between buttons */
+}
+
+.skip-button {
+  background: none;
+  border: none;
+  text-decoration: underline;
+  color: grey;
+  cursor: pointer;
+  font-family: DM Sans;
+  font-weight: bold;
+  font-size: 1.3rem;
+  transition: all 0.3s ease;
+  opacity: 0.4;
+}
+
+.skip-button:hover {
+  transition: all 0.3s ease;
+  opacity: 1;
+}
+
+.connect-button {
+  background-color: white;
+  border: none;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px; /* Space between image and text */
+  cursor: pointer;
+  width: 10rem;
+  font-family: DM Sans;
+  border-radius: 5px;
+  font-size: 1.3rem;
+  font-weight: bold;
+  padding: 10px;
+}
+
+.skip-text {
+  transform: scaleY(0);
+  transform-origin: top;
+  opacity: 0;
+  height: 7vw; /* Adjust based on the content size */
+  overflow: hidden;
+  text-align: center;
+  width: 70%;
+  margin-left: auto;  /* These two margin properties center the container */
+  margin-right: auto;
+}
+
+.show {
+  transform: scaleY(1);
+  transition: transform 0.3s ease, opacity 0.3s ease;
+  opacity: 1;
+}
+
+.connect-button {
+  display: flex;
+  align-items: left;
+  gap: 10px;
+}
+
+.bio-input {
+  width: 70%;
+  height: 9vw;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  resize: vertical;
+  max-height: 500px;
+  font-family: DM Sans;
+}
+
+.button-row2 {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.tip-text {
+  font-style: italic;
+  margin-bottom: 10px;
+  text-align: left;
+  width: 70vw;
+  max-width: 80%;
+}
+
+.button-container3 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.submit-button {
+  background-color: #CD1313;
+  color: rgb(255, 255, 255);
+  padding: 10px 20px;
+  border: 3px solid #D37200;
+  border-radius: 5px;
+  cursor: pointer;
+  font-family: DM Sans;
+  font-weight: bold;
+  width: 10rem;
+  transition: all 0.3s ease;
+  opacity: 1;
+}
+
+.submit-button:hover {
+  transition: all 0.3s ease;
+  opacity: 0.7;
+}
+
+.content2 {
+  flex-direction: row;
+}
+
+@media (max-width: 600px) {
+  .onboarding {
+    overflow: hidden;
+    width: 100vw;
+    height: 100vh;
+  }
+
+  .progress-bar img {
+    width: 80%;
+    margin: 0 5px;
+    top: 20%;
+  }
+
+  .content-onb {
+    margin-top: 20%;
+    transition: opacity 0.3s ease;
+    width: 150vw;
+  }
+  
+  .content-onb h1 {
+    transition: opacity 0.5s ease;
+    font-size: 1.5rem;
+    text-align: left;
+  }
+
+  .text-container {
+    margin-left: auto;
+    margin-right: auto;
+    text-align: left;
+    padding-bottom: 15%;
+  }
+
+  .button-container {
+    text-align: center;
+    padding-bottom: 20%;
+  }
+
+  .onboarding-button {
+    background-color: grey;
+    border: none;
+    color: white;
+    padding: 15px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 2vw 1.2vw;
+    transition: background-color 0.3s, width 0.3s, height 0.3s, border-radius 0.3s;
+    border-radius: 50%;
+    width: 1vw;
+    height: 1vw;
+    cursor: pointer;
+  }
+
+  p {
+    font-size: 1rem;
+  }
+
+  .bottom-img {
+    width: 30%;
+    top: 10%;
+  }
+
+  .skip-text {
+    transform: scaleY(0);
+    transform-origin: top;
+    opacity: 0;
+    height: 50%;
+    overflow: hidden;
+    text-align: center;
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+  
+  }
+
+  .show {
+    transform: scaleY(1);
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    opacity: 1;
+  }  
+  
+  .skip-button {
+    background: none;
+    border: none;
+    text-decoration: underline;
+    color: grey;
+    cursor: pointer;
+    font-family: DM Sans;
+    font-weight: bold;
+    font-size: 20px;
+    transition: all 0.3s ease;
+    opacity: 0.4;
+  }
+
+  .bio-input {
+    width: 70%;
+    height: 9vw;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    resize: vertical;
+    max-height: 500px;
+    font-family: DM Sans;
+  }
+  
+  .button-row2 {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .tip-text {
+    font-style: italic;
+    margin-bottom: 10px;
+    text-align: left;
+    width: 70vw;
+    max-width: 80%;
+  }
+  
+  .button-container3 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+  }
+  
+  .submit-button {
+    background-color: #CD1313;
+    color: rgb(255, 255, 255);
+    padding: 10px 20px;
+    border: 3px solid #D37200;
+    border-radius: 5px;
+    cursor: pointer;
+    font-family: DM Sans;
+    font-weight: bold;
+    width: 10rem;
+    transition: all 0.3s ease;
+  }
+
+  .skip-text {
+    transform: scaleY(0);
+    transform-origin: top;
+    opacity: 0;
+    height: 10%;
+    overflow: hidden;
+    text-align: center;
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .show {
+    transform: scaleY(1);
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    opacity: 1;
+  }
+
+  .content h1 {
+    text-align: center;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+
+  .button-container2 {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .connect-button {
+    width: 60%;
+  }
+
+  .bio-input {
+    width: 50%;
+    height: 8rem;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    resize: vertical;
+    max-height: 200px;
+    font-family: DM Sans;
+  }
+  
+  .button-row2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .tip-text {
+    font-style: italic;
+    margin-bottom: -20px;
+    text-align: center;
+    width: 70vw;
+    max-width: 80%;
+    font-size: 0.7rem;
+  }
+  
+  .button-container3 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 10px;
+    margin-bottom: 60px;
+    width: 100%;
+  }
+  
+  .submit-button {
+    background-color: #CD1313;
+    color: rgb(255, 255, 255);
+    padding: 10px 20px;
+    border: 3px solid #D37200;
+    border-radius: 5px;
+    cursor: pointer;
+    font-family: DM Sans;
+    font-weight: bold;
+    width: 60%;
+  }
+
+  .bio-content h1 {
+    padding: 10px;
+  }
+
+  .text-container2 p {
+    font-size: 0.8rem;
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 10px;
+  }
+
+  .content2 {
+    margin-bottom: 60px;
+  }
+
+  .content2 iframe {
+    flex-direction: row;
+    width: 60%;
+  }
+}
